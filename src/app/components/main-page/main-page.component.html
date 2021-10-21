@@ -1,0 +1,8 @@
+<div class="container">
+    <div *ngFor="let items of service.pageItems" routerLink="/details/{{items.id}}">{{items.name}}</div>
+</div>
+<div class="buttons">
+    <button (click)="previoslyPage()"><</button>
+    <button *ngFor="let button of service.pageNumbers" (click)="chosePage(button)" [ngStyle]="{'background-color': button == page ? 'blue' : 'rgb(60, 219, 255)'}">{{button}}</button>
+    <button (click)="nextPage()">></button>
+</div>

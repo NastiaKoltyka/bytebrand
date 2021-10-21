@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { DetailsPageComponent } from './details-page/details-page.component';
+import { DetailsPageComponent } from './components/details-page/details-page.component';
+import { MainPageComponent } from './components/main-page/main-page.component';
 
 const routes: Routes = [
   {
-    path: 'details/:id', component:DetailsPageComponent},
+    path: '', component: MainPageComponent
+  },
+    {
+    path: 'details/:id', component: DetailsPageComponent
+  },
 ];
 
 @NgModule({
@@ -14,6 +19,6 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forRoot(routes),
   ],
-  exports: [ RouterModule ]
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }

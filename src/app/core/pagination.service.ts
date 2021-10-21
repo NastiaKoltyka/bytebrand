@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
+
+
 import { Item } from '../class/items';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PaginationService {
-  private itemsPerPage: number = 3
+  private itemsPerPage: number = 3;
   items: Item[];
   pageNumbers: number[];
   pageItems:Item[];
@@ -66,7 +68,6 @@ export class PaginationService {
       }
 
     ]
-
     this.pageCount = Math.ceil(this.items.length / 3);
     for (let i = 0; i < this.pageCount; i++) {
       this.pageNumbers.push(i + 1);

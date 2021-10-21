@@ -1,0 +1,7 @@
+<ul>
+    <li *ngFor="let items of service.pageItems">{{items.id}}.{{items.name}}</li>
+</ul>
+<div>
+    <button *ngFor="let button of service.pageNumbers" (click)="chosePage(button)">{{button}}</button>
+</div>
+<router-outlet></router-outlet>
